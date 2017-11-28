@@ -1,37 +1,15 @@
 
-import ChannelData from "./channel-data.js";
-import Section from "./section.js";
+import PageController from "./page-controller.js";
 
-export class PageController {
-    constructor() {
-        this.sources = ["BBC News", "Financial Times", "Metro", "the Economist", "the Telegraph", "Independent", "Daily Mail"];
-    }
-
-    getNews() {
-        return this.getCheckedChannels().forEach(channel => {
-            let channelData = new ChannelData(channel);
-            channelData.getData()
-                .then(data => new Section([], data))
-                .then(section => section.addArticlesSectionToView())
-
-        });
-    }
-
-    renderPage() {
-        let section = new Section(this.sources);
-        section.addSourcesSectionToView();
-    }
-
-
-    getCheckedChannels() {
-        return Array.from(document.forms[0].elements).filter(resource => resource.checked).map(channel => channel.value);
-    }
-}
-
-export let page = new PageController();
-
+let page = new PageController();
 page.renderPage();
-page.getNews();
+
+let button = document.getElementById("getNews");
+button.addEventListener("click", () =>  document.getElementById("articles").innerHTML = "");
+button.addEventListener("click", page.getNews.bind(page));
+
+
+
 
 
 

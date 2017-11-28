@@ -7,7 +7,7 @@ export default class CheckBox {
     createCheckBox() {
         return `<div class="form-check">
         <label class="form-check-label">
-        <input class="form-check-input" checked type="checkbox" value=${this.value}>${this.title}
+        <input class="form-check-input" type="checkbox" value=${this.value}>${this.title}
         </label>
         </div>`;
     }

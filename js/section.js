@@ -1,6 +1,7 @@
 import CheckBox from "./check-box.js";
 import Article from "./article.js";
 
+
 export default class Section {
     constructor(sources = [], data = []) {
         this.sources = sources;
@@ -24,13 +25,14 @@ export default class Section {
     }
 
     createArticlesSection() {
-        let div = document.createElement("div")
+        let div = document.createElement("div");
+
         div.innerHTML = this.data.map(articleData => {
             let article = new Article(articleData);
             return article.createArticle();
         }).join("");
-        return div;
 
+        return div;
     }
 
     addArticlesSectionToView() {
@@ -38,6 +40,6 @@ export default class Section {
     }
 
     createGetNewsButton() {
-        return `<button class="btn btn-primary" onclick="page.getNews()">Get Your News</button>`;
+        return `<button class="btn btn-primary" id="getNews">Get Your News</button>`;
     }
 }
