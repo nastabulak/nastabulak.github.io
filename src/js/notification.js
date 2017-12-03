@@ -1,7 +1,6 @@
 export default class Notification {
     constructor(enviroment) {
         this.enviroment = enviroment;
-        this.DEV = "development";
         this.PROD = "production";
     }
 
@@ -13,7 +12,7 @@ export default class Notification {
     }
 
     createErrorNotificationTemplate() {
-        let message = `Что-то пошло не так. Не удалось загрузить новости`
+        const message = `Что-то пошло не так. Не удалось загрузить новости`;
         alert(message);
     }
 }

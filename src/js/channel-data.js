@@ -10,4 +10,3 @@ export default class ChannelData {
         return json.articles;
     }
 }
-

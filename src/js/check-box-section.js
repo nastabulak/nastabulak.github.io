@@ -5,13 +5,11 @@ export default class CheckBoxSection {
         this.sources = sources;
     }
 
-    createSourcesList() {
-        
+    createSourcesList() {        
         return this.sources.map(source => {
             const checkBox = new CheckBox(source);
             return checkBox.createCheckBox();
         }).join("");
-
     }
 
     createSourcesSection() {

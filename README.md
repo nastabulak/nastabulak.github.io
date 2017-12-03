@@ -16,19 +16,25 @@
 - [x] arrow functions
 - [x] classes
 - [x] let as variable declaration
+- [x] async/await
+
+
+## Task №2 [*ES2015/Babel Part 2*]
+***
+##### The task is to use babel and make the application to work in IE10, write a custom babel plugin.
 
 ***
-to run locally you need to copy folder, install
+to run locally you need to copy folder
 
-`$ npm install -g node-static `
+and install all dependencies inside it
 
- and 
+`$ npm install`
 
-`$ npm install connect serve-static`
+than run 
 
-and in src folder run
+`$ npm run start`
 
-`$ node server.js`
+to start server
 
 you can see the app at http://localhost:5000/index.html
 * Choose the channels you're interested in.

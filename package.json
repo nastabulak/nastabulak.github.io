@@ -1,11 +1,11 @@
 {
   "name": "frontcamp3-newsapi-nb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Study application that uses newsapi, which will run purely on the client-side",
   "main": "index.html",
   "scripts": {
     "build": "browserify src/js/script.js -o bundle.js -t [ babelify --presets [ env  ] ]",
-    "start": "node server.js"
+    "start": "npm run build && node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,11 @@
     "babel-core": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0"
+    "babelify": "^8.0.0",
+    "connect": "^3.6.5",
+    "serve-static": "^1.13.1"
   },
+
   "dependencies": {
     "whatwg-fetch": "^2.0.3"
   }

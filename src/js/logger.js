@@ -23,6 +23,6 @@ class Logger {
     error(message) {
         console.error(message);
     }
-
 }
+
 export let logger = new Logger("production");

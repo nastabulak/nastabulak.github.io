@@ -5,14 +5,17 @@ export default class ArticleSection {
         this.data = data;
     }
 
-    createArticlesSection() {
-        let div = document.createElement("div");
-
-        div.innerHTML = this.data.map(articleData => {
+    prepareInnerText(){
+        return this.data.map(articleData => {
             const article = new Article(articleData);
             return article.createArticle();
         }).join("");
+    }
 
+    createArticlesSection() {
+        let div = document.createElement("div");
+        div.innerHTML = this.prepareInnerText();
+        
         return div;
     }
 

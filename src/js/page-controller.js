@@ -20,7 +20,7 @@ export default class PageController {
     async getChannelNews(channel) {
         try {
             const channelData = new ChannelData(channel);
-            let data = await channelData.getData();
+            const data = await channelData.getData();
             this.renderArticleSection(data);
             logger.info(`loaded: ${channel}`);
         } catch (error) {
@@ -40,7 +40,7 @@ export default class PageController {
     }
 
     getCheckedChannels() {
-        let checkedChannels = Array.from(document.forms[0].elements).filter(resource => resource.checked).map(channel => channel.value);
+        const checkedChannels = Array.from(document.forms[0].elements).filter(resource => resource.checked).map(channel => channel.value);
         logger.info(`checked channels: ${checkedChannels}`);
         return checkedChannels;
     }
