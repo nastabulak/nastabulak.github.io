@@ -4,26 +4,32 @@
   "description": "Study application that uses newsapi, which will run purely on the client-side",
   "main": "index.html",
   "scripts": {
-    "build": "browserify src/js/script.js -o bundle.js -t [ babelify --presets [ env  ] ]",
-    "start": "npm run build && node server.js"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js && node server"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.epam.com:Nastassia_Bulak/FrontCamp3.git"
+    "url": "https://Nastassia_Bulak@git.epam.com/Nastassia_Bulak/FrontCamp3.git"
   },
   "author": "nastassia_bulak@epam.com",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",  
+    "clean-webpack-plugin": "^0.1.17",
     "connect": "^3.6.5",
-    "serve-static": "^1.13.1"
+    "html-webpack-plugin": "^2.30.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "serve-static": "^1.13.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
   },
-
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "whatwg-fetch": "^2.0.3"
   }
 }
