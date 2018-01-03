@@ -11,11 +11,11 @@ and install all dependencies inside it
 than run production mode
 
 `$ npm run build`
- you can see the app at http://localhost:5000/index.html
+ you can see the app at http://localhost:5000
 
 or run development mode
 `$ npm run build`
-and the app will be opened at http://localhost:8080/index.html with HMR.
+and the app will be opened at http://localhost:8080 with HMR.
 
 * Click "Show News" button and you will see the available channels to get news.
 * Choose the channels you're interested in.
@@ -48,3 +48,8 @@ and the app will be opened at http://localhost:8080/index.html with HMR.
 ## Task №3 [*Webpack*]
 ***
 ##### The task is to use webpack and configure the bundler for development and production mode and write custom chainable loader for removing number attributes from source.
+
+## Task №4 [*Design Patterns*]
+***
+##### The task is to implement creational, structural, behavioral patterns and use custom Redux.
+

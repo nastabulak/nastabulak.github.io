@@ -1,0 +1,17 @@
+@green : #d6f9db;
+@blue: #d1edfc;
+@yellow: #FBFBEF;
+.background(@color) {
+    background-color: @color
+}
+
+body {
+    .background(@yellow);
+    display: flex;
+    #resources {
+        .background(@green);
+    }
+    #articles {
+        .background(@blue);
+    }
+}

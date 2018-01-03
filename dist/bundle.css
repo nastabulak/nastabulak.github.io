@@ -1,0 +1,12 @@
+body {
+  background-color: #FBFBEF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body #resources {
+  background-color: #d6f9db;
+}
+body #articles {
+  background-color: #d1edfc;
+}
