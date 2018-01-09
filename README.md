@@ -52,4 +52,14 @@ and the app will be opened at http://localhost:8080 with HMR.
 ## Task №4 [*Design Patterns*]
 ***
 ##### The task is to implement creational, structural, behavioral patterns and use custom Redux.
+##### The following patterns are used:
+- [x] Singleton;
+- [x] LazyLoading
+- [x] Prototype (constructor);
+- [x] Facade;
+- [x] Service;
+- [x] Front Controller;
+- [x] Flux;
+- [x] Action;
+- [x] State;
 
