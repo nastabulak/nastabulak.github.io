@@ -53,13 +53,18 @@ and the app will be opened at http://localhost:8080 with HMR.
 ***
 ##### The task is to implement creational, structural, behavioral patterns and use custom Redux.
 ##### The following patterns are used:
+
 - [x] Singleton;
-- [x] LazyLoading
 - [x] Prototype (constructor);
-- [x] Facade;
-- [x] Service;
+
+- [x] LazyLoading
+- [x] Facade (service);
 - [x] Front Controller;
+
 - [x] Flux;
 - [x] Action;
 - [x] State;
 
+## Task №5 [*Mongo DB*] Part 1
+***
+##### The task is to practice quiries and indexes in MongoDB. Please see [results](.\mongo\readme.md)
